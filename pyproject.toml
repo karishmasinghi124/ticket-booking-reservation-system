@@ -1,0 +1,22 @@
+[project]
+name = "cosmic-ticketing"
+version = "1.0.0"
+description = "Concurrency-aware futuristic travel ticket booking API"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<1.0",
+  "uvicorn[standard]>=0.30,<1.0",
+  "sqlalchemy>=2.0,<3.0",
+  "pydantic-settings>=2.5,<3.0",
+  "email-validator>=2.2,<3.0",
+  "streamlit>=1.38,<2.0",
+  "requests>=2.32,<3.0"
+]
+[project.optional-dependencies]
+dev = ["pytest>=8.0,<9.0", "httpx>=0.27,<1.0"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
